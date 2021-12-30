@@ -17,14 +17,16 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    
-    $encryptedValue = Crypt::encryptString('888888888');
 
-    $data = User::find(1); 
+    return "ok";
+    
+    // $encryptedValue = Crypt::encryptString('888888888');
+
+    // $data = User::find(1); 
 
     // $token = $user->createtoken('costumerToken')->plainTextToken;
     // return $encryptedValue;
-    return $data->createtoken('costumerToken')->plainTextToken;
+    // return $data->createtoken('costumerToken')->plainTextToken;
 
     // $da = 'eyJpdiI6ImZ0NEFJbndLUERmeEtZZC9sVHRDVHc9PSIsInZhbHVlIjoiV2lyZFRJWGNnVWR4eE1TNSs2MUxiT0lrVGZnNUF6ckNZeHlmclRlMlMxczRhSVVIcVhOZlZHM2ZJYzhSS2UxbEdGRE5lMWV1aS9EaXhzRE52bGw1Qnc9PSIsIm1hYyI6IjQxYTU4NGUxODU5YjVkMDg0ZTA0NzQ3NDk0YzU4Mjg1OWM4NzUyZTlhZTU3ODBlYTcwZGQxNzkwMzc4MzU1NTgiLCJ0YWciOiIifQ==';
     // $decrypted = Crypt::decryptString($da);
