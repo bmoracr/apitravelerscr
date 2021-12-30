@@ -33,3 +33,30 @@ Route::get('/', function () {
     // return $decrypted;
     
 });
+
+
+
+Route::get('/test', function () {
+    
+    
+
+    function groupByOwners(array $files) : array
+{
+ 
+        $data = asort($files);
+        return [$data];
+    
+}
+
+$files = array
+(
+    "Input.txt" => "Randy",
+    "Code.py" => "Stan",
+    "Output.txt" => "Randy"
+);
+var_dump(groupByOwners($files));
+
+
+
+
+});
