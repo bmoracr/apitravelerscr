@@ -18,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    return "ok";
+    return view('welcome');
     
     // $encryptedValue = Crypt::encryptString('888888888');
 
