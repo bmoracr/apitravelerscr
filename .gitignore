@@ -2,7 +2,7 @@
 /public/hot
 /public/storage
 /storage/*.key
-
+.cpanel.yml
 .env
 .env.backup
 .phpunit.result.cache
