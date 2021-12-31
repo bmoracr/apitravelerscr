@@ -3,11 +3,8 @@
 use App\Models\User;
 use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Route;
-
-use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
-use RuntimeException;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,15 +18,7 @@ use RuntimeException;
 
 Route::get('/', function () {
 
-    //    return false;
-    Bugsnag::registerCallback(function ($report) {
-        $report->setMetaData([
-            'account' => [
-                'name' => 'Acme Co.',
-                'paying_customer' => true,
-            ]
-        ]);
-    });
+    Log::debug('An informational message.'); 
     return 'yes';
    
     
