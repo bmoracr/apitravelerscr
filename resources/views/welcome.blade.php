@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
@@ -23,4 +23,29 @@
     <body class="antialiased">
         {{ Illuminate\Mail\Markdown::parse(file_get_contents(base_path() . '/README.md')) }}
     </body>
-</html>
+</html> --}}
+<!DOCTYPE html>
+<head>
+  <title>Pusher Test</title>
+  <link rel="stylesheet" href="{{ url('css/app.css')}}">
+</head>
+<body>
+  <h1>Pusher Test</h1>
+  <p>
+    Try publishing an event to channel <code>my-channel</code>
+    with event name <code>my-event</code>.<br>
+
+    <input type="text" name="username" id="username"><br>
+
+
+    <form id="message_form">    
+        @csrf
+        <input type="text" name="message" id="message"><br>
+        <button>Send Message</button>
+    </form>
+
+    <div id="messages"></div> 
+
+    <script src="{{ url('js/app.js')}}"></script>
+  </p>
+</body>
