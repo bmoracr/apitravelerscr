@@ -40,7 +40,7 @@
 
     <input type="text" name="message" id="message"><br>
     <form id="message_form">    
-        @csrf
+        {{-- @csrf --}}
         <button>Send Message</button>
     </form>
 

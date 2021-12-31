@@ -35,7 +35,7 @@ class Message implements ShouldBroadcast
      */
     public function broadcastOn()
     {
-        return new Channel('chat'.$this->username->id);
+        return new Channel('chat');
     }
     public function broadcastAs(){
         return 'message';
