@@ -21,15 +21,8 @@ use RuntimeException;
 
 Route::get('/', function () {
 
-//    return false;
-    Bugsnag::registerCallback(function ($report) {
-        $report->setMetaData([
-            'account' => [
-                'name' => 'Acme Co.',
-                'paying_customer' => true,
-            ]
-        ]);
-    });
+    
+    Bugsnag::notifyException(new RuntimeException("Test error"));
     return 'yes';
    
     
