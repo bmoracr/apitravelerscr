@@ -1,18 +1,18 @@
 # /vendor
-/node_modules
-/public/hot
-/public/storage
-/storage/*.key
-.cpanel.yml
+# /node_modules
+# /public/hot
+# /public/storage
+# /storage/*.key
+# .cpanel.yml
 .env
 .env.backup
-.phpunit.result.cache
-docker-compose.override.yml
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-/.idea
-/.vscode
-/public
-server.php
+# .phpunit.result.cache
+# docker-compose.override.yml
+# Homestead.json
+# Homestead.yaml
+# npm-debug.log
+# yarn-error.log
+# /.idea
+# /.vscode
+# /public
+# server.php
