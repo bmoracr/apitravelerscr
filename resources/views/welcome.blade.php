@@ -38,9 +38,9 @@
     <input type="text" name="username" id="username"><br>
 
 
+    <input type="text" name="message" id="message"><br>
     <form id="message_form">    
-        @csrf
-        <input type="text" name="message" id="message"><br>
+        {{-- @csrf --}}
         <button>Send Message</button>
     </form>
 
