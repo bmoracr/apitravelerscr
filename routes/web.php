@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
+use RuntimeException;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,8 +21,15 @@ use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
 
 Route::get('/', function () {
 
-    
-    Bugsnag::notify('something');
+    //    return false;
+    Bugsnag::registerCallback(function ($report) {
+        $report->setMetaData([
+            'account' => [
+                'name' => 'Acme Co.',
+                'paying_customer' => true,
+            ]
+        ]);
+    });
     return 'yes';
    
     
