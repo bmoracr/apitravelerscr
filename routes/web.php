@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-
+    event(new Message('this is username', 'This is message'));
     return view('welcome');
     
 });
