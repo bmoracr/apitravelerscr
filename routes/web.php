@@ -6,7 +6,6 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
 use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
-use RuntimeException;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,7 +21,7 @@ use RuntimeException;
 Route::get('/', function () {
 
     
-    Bugsnag::notifyException(new RuntimeException("Test error"));
+    Bugsnag::notifyException("Test error");
     return 'yes';
    
     
