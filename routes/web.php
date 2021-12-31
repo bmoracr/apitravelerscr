@@ -21,7 +21,7 @@ use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
 Route::get('/', function () {
 
     
-    Bugsnag::notifyException("Test error");
+    Bugsnag::notify('something');
     return 'yes';
    
     
