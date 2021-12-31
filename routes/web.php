@@ -5,6 +5,9 @@ use Illuminate\Support\Facades\Crypt;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
+use Bugsnag\BugsnagLaravel\Facades\Bugsnag as Bugsnag;
+use RuntimeException;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -18,7 +21,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
 
-    return view('welcome');
+//    return false;
+    Bugsnag::registerCallback(function ($report) {
+        $report->setMetaData([
+            'account' => [
+                'name' => 'Acme Co.',
+                'paying_customer' => true,
+            ]
+        ]);
+    });
+    return 'yes';
+   
     
     // $encryptedValue = Crypt::encryptString('888888888');
 
@@ -38,27 +51,27 @@ Route::get('/', function () {
 
 
 
-Route::get('/test', function () {
+// Route::get('/test', function () {
     
     
 
-    function groupByOwners(array $files) : array
-{
+//     function groupByOwners(array $files) : array
+// {
  
-        $data = asort($files);
-        return [$data];
+//         $data = asort($files);
+//         return [$data];
     
-}
+// }
 
-$files = array
-(
-    "Input.txt" => "Randy",
-    "Code.py" => "Stan",
-    "Output.txt" => "Randy"
-);
-var_dump(groupByOwners($files));
-
-
+// $files = array
+// (
+//     "Input.txt" => "Randy",
+//     "Code.py" => "Stan",
+//     "Output.txt" => "Randy"
+// );
+// var_dump(groupByOwners($files));
 
 
-});
+
+
+// });
