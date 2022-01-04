@@ -13,7 +13,7 @@ class Tour extends Model
         'code',
         'name',
         'description',
-        'category',
+        'category_id',
         'includes',
         'additional',
         'p_web_plus',

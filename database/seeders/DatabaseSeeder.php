@@ -17,6 +17,7 @@ class DatabaseSeeder extends Seeder
 
         
         // \App\Models\User::factory(10)->create();
+        // \App\Models\Api\Tours\Tour::factory()->count(3)->make();
         $this->call(TourSeeder::class);
     }
 }

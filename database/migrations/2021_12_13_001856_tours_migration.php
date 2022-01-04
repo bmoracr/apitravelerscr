@@ -20,7 +20,11 @@ class ToursMigration extends Migration
             $table->string('code');
             $table->text('name');
             $table->longText('description');
-            $table->enum('category', ['playa', 'naturaleza', 'cultural', 'volcan', 'other']);
+
+            
+            $table->unsignedBigInteger('category_id');
+            $table->foreign('category_id')->references('id')->on('category');
+
             $table->longText('includes');
             $table->longText('additional');
             //Prices
