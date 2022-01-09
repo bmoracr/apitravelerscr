@@ -37,7 +37,7 @@ class TourFactory extends Factory
             'to_brouchure' => $faker->numberBetween(0, 1),
             'to_web' => $faker->numberBetween(0, 1),
             'to_seasonal' => $faker->numberBetween(0, 100),
-            'user_id' => 1,
+            'userId' => 1,
             'image' => null,
         ];
     }

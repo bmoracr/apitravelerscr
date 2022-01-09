@@ -41,8 +41,8 @@ class ToursMigration extends Migration
             $table->boolean('to_seasonal');
             //Register
             // $table->string('username');
-            $table->unsignedBigInteger('user_id');
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->unsignedBigInteger('userId');
+            $table->foreign('userId')->references('id')->on('users');
 
             $table->timestamps();
 

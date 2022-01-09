@@ -45,7 +45,7 @@ class ToursController extends Controller
             'to_brouchure' => 'required|numeric',
             'to_web' => 'required|numeric',
             'to_seasonal' => 'required|string',
-            'user_id' => 'required|integer',
+            'userId' => 'required|integer',
             'image' => 'exclude_if:image,null|exclude_if:image,false|file|mimes:jpg,bmp,png|max:1024',
         ]);
         $image_to_array = (empty($storeData['image']) || $storeData['image'] == false || $storeData['image'] == null) ? null 
@@ -111,7 +111,7 @@ class ToursController extends Controller
             'to_brouchure' => 'numeric',
             'to_web' => 'numeric',
             'to_seasonal' => 'string',
-            'user_id' => 'required|integer',
+            'userId' => 'required|integer',
             'image' => 'exclude_if:image,null|exclude_if:image,false|file|mimes:jpg,bmp,png|max:1024',
         ]);
         if($tour){ 
