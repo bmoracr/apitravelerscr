@@ -15,7 +15,7 @@ class Tour extends Model
         'description',
         'category_id',
         'includes',
-        'additional',
+        'extras',
         'p_web_plus',
         'p_web_less',
         'p_brouchure_rack',
@@ -25,6 +25,7 @@ class Tour extends Model
         'to_brouchure',
         'to_web',
         'to_seasonal',
-        'username',
+        'user_id',
+        'image',
     ];
 }

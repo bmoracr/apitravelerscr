@@ -26,7 +26,8 @@ class ToursMigration extends Migration
             $table->foreign('category_id')->references('id')->on('categories');
 
             $table->longText('includes');
-            $table->longText('additional');
+            $table->longText('extras');
+           
             //Prices
             $table->double('p_web_plus', 8, 2);
             $table->double('p_web_less', 8, 2);
@@ -39,8 +40,14 @@ class ToursMigration extends Migration
             $table->boolean('to_web');
             $table->boolean('to_seasonal');
             //Register
-            $table->string('username');
+            // $table->string('username');
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+
             $table->timestamps();
+
+            //Files
+            $table->longText('image')->nullable();
         });
     }
 

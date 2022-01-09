@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Database\Seeders\CategorySeeder;
+use Database\Seeders\PrivilegeSeeder;
 use Database\Seeders\TourSeeder;
 use Database\Seeders\UserSeeder;
 use Illuminate\Database\Seeder;

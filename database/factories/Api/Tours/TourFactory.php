@@ -25,9 +25,9 @@ class TourFactory extends Factory
             'code' => $faker->unique()->numberBetween(500000, 1000000),
             'name' => $faker->unique()->name(),
             'description' => $faker->paragraph(),
-            'category_id' => 1,
+            'category_id' => $faker->randomElement([1, 2, 3, 4, 5]),
             'includes' => $faker->randomElement(['Tickets, Lunch', 'Tickets, Lunch, Dinner', 'Tickets, Dinner']),
-            'additional' => $faker->randomElement(['Water, Beers', 'Water']),
+            'extras' => $faker->randomElement(['Water', 'Beers', 'Other']),
             'p_web_plus' => $faker->randomFloat(1, 25, 100),
             'p_web_less' => $faker->randomFloat(1, 25, 100),
             'p_brouchure_rack' => $faker->randomFloat(1, 25, 100),
@@ -36,8 +36,9 @@ class TourFactory extends Factory
             'status' => $faker->numberBetween(0, 1),
             'to_brouchure' => $faker->numberBetween(0, 1),
             'to_web' => $faker->numberBetween(0, 1),
-            'to_seasonal' => $faker->numberBetween(0, 1),
-            'username' => $faker->word(),
+            'to_seasonal' => $faker->numberBetween(0, 100),
+            'user_id' => 1,
+            'image' => null,
         ];
     }
 }

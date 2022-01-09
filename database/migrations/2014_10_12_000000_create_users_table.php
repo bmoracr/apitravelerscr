@@ -19,7 +19,9 @@ class CreateUsersTable extends Migration
             $table->string('lastname');
             $table->date('birthday')->nullable();
             $table->boolean('role');
-            $table->string('privileges');
+            $table->boolean('is_web');
+            $table->boolean('is_brouchure');
+            $table->boolean('is_voucher');
             $table->string('username')->unique();
             $table->string('phone')->unique();
             $table->string('email')->unique();
