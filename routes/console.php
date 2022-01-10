@@ -12,12 +12,19 @@ Artisan::command('inspire', function () {
 
 Artisan::command('auth:token {required} {--type=false} {--validator=false}', function ($required, $type, $validator) {
 
-    $password = $this->secret('What is the password?');
+    $password = $this->secret('Admin password required?');
     
-    if($type === 'false'){
-        $this->comment('Missing type: --type={code,username,id...}');    
+    if($password == "20121994Mora."){
+
+        if($type === 'false'){
+            $this->comment('Missing type: --type={code,username,id...}');    
+        }else{
+            $validator = $validator ? '=' : $validator;
+            $this->comment(AuthConsoleController::getAccessToken($required, $type, $validator));         
+        }
+
     }else{
-        $validator = ($validator === 'false') ? $validator : '=';
-        $this->comment(AuthConsoleController::getAccessToken($required, $type, $validator));         
+        $this->comment('Unauthenticated');   
     }
-})->purpose('Display an inspiring quote');
+
+})->purpose('Display a user token');
