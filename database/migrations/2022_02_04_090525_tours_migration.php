@@ -44,12 +44,13 @@ class ToursMigration extends Migration
             $table->unsignedBigInteger('userId');
             $table->foreign('userId')->references('id')->on('users');
 
-            $table->timestamps();
-
             //Files
             $table->longText('image')->nullable();
+            
+            $table->timestamps();
+
         });
-    }
+    } 
 
     /**
      * Reverse the migrations.
