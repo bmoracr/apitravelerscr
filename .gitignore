@@ -16,3 +16,10 @@
 # /.vscode
 # /public
 # server.php
+
+
+/storage/logs
+/storage/app/public/toursImages
+/storage/framework/cache
+/storage/framework/sessions
+/storage/framework/views

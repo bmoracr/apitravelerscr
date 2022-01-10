@@ -54,11 +54,7 @@ class ToursController extends Controller
         $storeData = Arr::set($storeData, 'image', $image_to_array);
         return json_encode([
                                 'code'=>200, 
-                                'result'=> new ToursResource(
-                                                                Tour::findOrFail(
-                                                                                    Tour::create($storeData)->id
-                                                                                )
-                                                            )
+                                'result'=> new ToursResource(Tour::findOrFail(Tour::create($storeData)->id))
                             ]);
     }
     /**

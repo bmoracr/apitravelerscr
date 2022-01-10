@@ -25,7 +25,7 @@ class Tour extends Model
         'to_brouchure',
         'to_web',
         'to_seasonal',
-        'user_id',
+        'userId',
         'image',
     ];
 }

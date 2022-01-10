@@ -56,7 +56,7 @@ class ToursResource extends JsonResource
                                 'updated_at' => $this->updated_at,
                             ],
             
-            'created_by' => new UsersToursResource(User::findOrFail($this->user_id)),
+            'created_by' => new UsersToursResource(User::findOrFail($this->userId)),
   
         ];
     }
