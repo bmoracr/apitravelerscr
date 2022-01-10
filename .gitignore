@@ -22,4 +22,4 @@ yarn-error.log
 /storage/app/public/toursImages/*
 /storage/framework/cache/*
 /storage/framework/sessions/*
-/storage/framework/view/*
+/storage/framework/views/*
