@@ -49,7 +49,7 @@ class ToursController extends Controller
             'image' => 'exclude_if:image,null|exclude_if:image,false|file|mimes:jpg,bmp,png|max:1024',
         ]);
         $image_to_array = (empty($storeData['image']) || $storeData['image'] == false || $storeData['image'] == null) ? null 
-                            : Storage::put('public/toursImages',  $request->file('image'));
+                            : Storage::put('public/toursImages',  $request->file('image', 'public'));
 
         $storeData = Arr::set($storeData, 'image', $image_to_array);
         return json_encode([
