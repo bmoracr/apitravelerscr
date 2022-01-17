@@ -7,9 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-
-    // echo public_path('../storage');
-    // return view('welcome');    
+    return view('welcome');    
 });
 
 
