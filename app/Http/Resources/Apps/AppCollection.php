@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Resources\Tours;
+namespace App\Http\Resources\Apps;
 
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
-class ToursCollection extends ResourceCollection
+class AppCollection extends ResourceCollection
 {
     /**
      * Transform the resource collection into an array.
@@ -20,4 +20,3 @@ class ToursCollection extends ResourceCollection
         ];
     }
 }
- 

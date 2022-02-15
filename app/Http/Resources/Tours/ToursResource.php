@@ -32,7 +32,7 @@ class ToursResource extends JsonResource
             'includes' => $this->includes,
             
             'extras' => $this->extras,
-
+ 
             'files' => $this->image,
             
             'description' => $this->description,

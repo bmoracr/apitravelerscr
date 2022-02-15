@@ -23,7 +23,8 @@ class DatabaseSeeder extends Seeder
         // \App\Models\Api\Tours\Tour::factory()->count(3)->make();
         $this->call(CategorySeeder::class);
         $this->call(UserSeeder::class);
-        $this->call(TourSeeder::class);
+        // $this->call(TourSeeder::class);
+        $this->call(AppSeeder::class);
         
     }
 }

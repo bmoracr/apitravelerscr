@@ -1,5 +1,7 @@
 <?php
 #Setting namespaces required
+
+use App\Http\Controllers\Api\Apps\AppsController;
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Tours\CategoryController;
 use App\Http\Controllers\Api\Tours\ToursController;
@@ -25,6 +27,8 @@ Route::group( ['middleware'=>['api.key'] ], function () {
 #Middleware to set authorization Bearer validation
 Route::group( ['middleware'=>['auth:sanctum'] ], function () {
 
+    #Apps end point
+    Route::resources(['apps' => AppsController::class]);
     #Users end point
     Route::resources(['users' => UsersController::class]);
     #Tours end point

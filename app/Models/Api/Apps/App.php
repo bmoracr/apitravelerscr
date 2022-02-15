@@ -9,22 +9,17 @@ class App extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'code',
-        'name',
-        'url',
-        'contact_mail',
-        'support_mail',
-        'sales_mail',
-        'phone_contact',
-        'legacy_id',
-        'address',
-        'status',
-        'p_brouchure_comission',
-        'status',
-        'to_brouchure',
-        'to_web',
-        'to_seasonal',
-        'username',
+        'app_id',
+        'app_name',
+        'comercial_name',
+        'iva',
+        'phone_number',
+        'sociable_whatsapp',
+        'sociable_instagram',
+        'sociable_facebook',
+        'sociable_twiter',
+        'sociable_linkedin',
+        'description',
+        'last_used_at'
     ];
 }
- 
