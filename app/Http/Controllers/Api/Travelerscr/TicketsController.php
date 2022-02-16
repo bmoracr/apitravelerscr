@@ -50,6 +50,7 @@ class TicketsController extends Controller
             'phoneNumber' => 'required|string',
             'acceptTerms' => 'required|string',
             'productsId' => 'required|string',
+            'payment' => 'null|string',
         ]);
         return json_encode([
                                 'code'=>200, 

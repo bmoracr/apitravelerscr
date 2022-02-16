@@ -19,5 +19,6 @@ class Ticket extends Model
         'phoneNumber',
         'acceptTerms',
         'productsId',
+        'payment',
     ];
 }

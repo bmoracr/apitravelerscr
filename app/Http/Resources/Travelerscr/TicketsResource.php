@@ -20,6 +20,7 @@ class TicketsResource extends JsonResource
                 'tax' => $this-> tax,
                 'subTotal' => $this-> subTotal,
                 'totalPrice' => $this-> totalPrice,
+                'payment' => $this->payment,
             ],
             'costumer_info' => [
                 'costumerCode' => $this-> costumerCode,

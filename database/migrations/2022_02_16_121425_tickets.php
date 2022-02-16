@@ -15,7 +15,7 @@ class Tickets extends Migration
     {
         Schema::create('tickets', function (Blueprint $table) {
             $table->id();
-            
+
             $table->double('tax', 8, 2);
             $table->double('subTotal', 8, 2);
             $table->double('totalPrice', 8, 2);
@@ -26,6 +26,7 @@ class Tickets extends Migration
             $table->string('email');
             $table->string('acceptTerms');
             $table->string('productsId');
+            $table->string('payment')->nullable();
             
             $table->timestamp('last_used_at')->nullable();
             $table->timestamps();
