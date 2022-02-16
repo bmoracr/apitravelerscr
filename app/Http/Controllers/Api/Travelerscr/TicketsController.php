@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\Travelerscr;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\Travelerscr\TicketsCollection;
 use App\Http\Resources\Travelerscr\TicketsResource;
 use App\Models\Api\Travelerscr\Ticket;
 use Illuminate\Http\Request;
@@ -16,7 +17,7 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        return Ticket::first() ? json_encode([new TicketsResource(Ticket::all())]) : json_encode(['code'=>100, 'result'=>'not found']);
+        return Ticket::first() ? json_encode([new TicketsCollection(Ticket::all())]) : json_encode(['code'=>100, 'result'=>'not found']);
         
     }
 
