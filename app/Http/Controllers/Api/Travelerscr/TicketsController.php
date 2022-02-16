@@ -64,11 +64,11 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($code)
     {
-        return Ticket::find($id) ? json_encode([
+        return Ticket::where('costumerCode', $code)->first() ? json_encode([
             'code'=>200, 
-            'result'=> new TicketsResource(Ticket::findOrFail($id))
+            'result'=> new TicketsResource(Ticket::where('costumerCode', $code)->first())
         ]) : json_encode([
                 'code'=>100, 
                 'result'=>'not found'
