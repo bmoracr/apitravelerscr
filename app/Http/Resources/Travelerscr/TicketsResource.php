@@ -27,7 +27,6 @@ class TicketsResource extends JsonResource
                 'title' => $this-> title,
                 'costumerName' => $this-> costumerName,
                 'phoneNumber' => $this-> phoneNumber,
-                'totalPrice' => $this-> totalPrice,
                 'email' => $this-> email,
             ],
             'legacy' => [
