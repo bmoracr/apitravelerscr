@@ -29,7 +29,7 @@ Route::group( ['middleware'=>['api.key'] ], function () {
 Route::group( ['middleware'=>['auth:sanctum'] ], function () {
 
     #Apps end point
-    Route::resources(['apps' => TicketsController::class]);
+    Route::resources(['tickets' => TicketsController::class]);
     #Apps end point
     Route::resources(['apps' => AppsController::class]);
     #Users end point
