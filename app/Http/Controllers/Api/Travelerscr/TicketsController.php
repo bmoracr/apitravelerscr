@@ -93,9 +93,9 @@ class TicketsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $code)
     {
-        $tour = Ticket::find($id);
+        $tour = Ticket::where('costumerCode', $code)->first();
 
         $storeData = $request->validate([
             'tax' => 'numeric', 
@@ -112,7 +112,7 @@ class TicketsController extends Controller
         ]);
         if($tour){ 
             $tour->update($storeData);
-            return new TicketsResource(Ticket::findOrFail($id));          
+            return new TicketsResource(Ticket::where('costumerCode', $code)->first());          
         }else{
             return json_encode(['code'=>100, 'result'=>'not found']);
         }
