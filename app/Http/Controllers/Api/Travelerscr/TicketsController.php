@@ -98,17 +98,17 @@ class TicketsController extends Controller
         $tour = Ticket::find($id);
 
         $storeData = $request->validate([
-            'tax' => 'null|numeric', 
-            'subTotal' => 'null|numeric',
-            'totalPrice' => 'null|numeric',
-            'costumerCode' => 'null|string',
-            'title' => 'null|string',
-            'costumerName' => 'null|string',
-            'email' => 'null|string',
-            'phoneNumber' => 'null|string',
-            'acceptTerms' => 'null|string',
-            'productsId' => 'null|string',
-            'payment' => 'null|string',
+            'tax' => 'numeric', 
+            'subTotal' => 'numeric',
+            'totalPrice' => 'numeric',
+            'costumerCode' => 'string',
+            'title' => 'string',
+            'costumerName' => 'string',
+            'email' => 'string',
+            'phoneNumber' => 'string',
+            'acceptTerms' => 'string',
+            'productsId' => 'string',
+            'payment' => 'string',
         ]);
         if($tour){ 
             $tour->update($storeData);
