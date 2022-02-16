@@ -95,7 +95,27 @@ class TicketsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $tour = Ticket::find($id);
+
+        $storeData = $request->validate([
+            'tax' => 'null|numeric', 
+            'subTotal' => 'null|numeric',
+            'totalPrice' => 'null|numeric',
+            'costumerCode' => 'null|string',
+            'title' => 'null|string',
+            'costumerName' => 'null|string',
+            'email' => 'null|string',
+            'phoneNumber' => 'null|string',
+            'acceptTerms' => 'null|string',
+            'productsId' => 'null|string',
+            'payment' => 'null|string',
+        ]);
+        if($tour){ 
+            $tour->update($storeData);
+            return new TicketsResource(Ticket::findOrFail($id));          
+        }else{
+            return json_encode(['code'=>100, 'result'=>'not found']);
+        }
     }
 
     /**
