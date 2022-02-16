@@ -5,6 +5,7 @@ use App\Http\Controllers\Api\Apps\AppsController;
 use App\Http\Controllers\Api\Auth\AuthController;
 use App\Http\Controllers\Api\Tours\CategoryController;
 use App\Http\Controllers\Api\Tours\ToursController;
+use App\Http\Controllers\Api\Travelerscr\TicketsController;
 use App\Http\Controllers\Api\Users\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,6 +28,8 @@ Route::group( ['middleware'=>['api.key'] ], function () {
 #Middleware to set authorization Bearer validation
 Route::group( ['middleware'=>['auth:sanctum'] ], function () {
 
+    #Apps end point
+    Route::resources(['apps' => TicketsController::class]);
     #Apps end point
     Route::resources(['apps' => AppsController::class]);
     #Users end point
