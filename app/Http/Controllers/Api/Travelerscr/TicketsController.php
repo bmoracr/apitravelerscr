@@ -48,6 +48,7 @@ class TicketsController extends Controller
             'email' => 'required|string',
             'phoneNumber' => 'required|string',
             'acceptTerms' => 'required|string',
+            'productsId' => 'required|string',
         ]);
         return json_encode([
                                 'code'=>200, 
