@@ -94,4 +94,12 @@ class AuthController extends Controller
         ];
 
     }
+
+    // loggin auth token authentication
+    public function sessioninfo(Request $request){
+        
+
+        return auth()->user();
+
+    }
 }
