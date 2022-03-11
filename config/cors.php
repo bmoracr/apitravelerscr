@@ -19,7 +19,7 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['*', 'http://localhost', 'https://admin.travelerscr.com/'],
+    'allowed_origins' => ['*', 'http://localhost:3000/', 'https://admin.travelerscr.com/'],
 
     'allowed_origins_patterns' => [],
 
