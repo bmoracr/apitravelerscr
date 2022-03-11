@@ -25,7 +25,7 @@ Route::group( ['middleware'=>['api.cors'] ], function () {
     });
 
     #Middleware to set authorization Bearer validation
-    // Route::group( ['middleware'=>['auth:sanctum'] ], function () {
+    Route::group( ['middleware'=>['auth:sanctum'] ], function () {
 
         #Apps end point
         Route::resources(['tickets' => TicketsController::class]);
@@ -42,6 +42,6 @@ Route::group( ['middleware'=>['api.cors'] ], function () {
         Route::post('/auth/logout', [AuthController::class, 'logout'])->name('auth.logout');
         Route::post('/auth/sessioninfo', [AuthController::class, 'sessioninfo'])->name('auth.sessionInfo');
 
-    // });
+    });
 
 });
